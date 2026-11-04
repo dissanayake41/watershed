@@ -18,14 +18,14 @@ main{position:relative;min-height:0}
 .hero-photo{z-index:-3}
 .hero-film{z-index:-2;opacity:0}
 .hero-film.is-ready{opacity:1}
-.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(4,24,23,.60) 0%,rgba(4,24,23,.35) 24%,rgba(4,24,23,.04) 42%,rgba(4,24,23,.10) 57%,rgba(4,24,23,.53) 82%,rgba(4,24,23,.86) 100%)}
-.hero-copy{position:absolute;left:56px;right:56px;top:102px;text-align:center;text-shadow:0 2px 26px #061e2066}
+.hero-shade{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(235,251,255,.40) 0%,rgba(235,251,255,.22) 25%,rgba(235,251,255,0) 39%,rgba(4,40,31,0) 77%,rgba(4,40,31,.12) 87%,rgba(4,40,31,.72) 100%)}
+.hero-copy{position:absolute;left:56px;right:56px;top:102px;text-align:center;color:#153f5a;text-shadow:0 2px 24px #effbff70}
 .eyebrow{display:flex;align-items:center;justify-content:center;gap:20px;margin:0 0 29px;font-size:25px;font-weight:600;line-height:32px;letter-spacing:5px}
-.eyebrow span{font-size:20px;letter-spacing:0;color:#f5c04b}
+.eyebrow span{font-size:20px;letter-spacing:0;color:#b8760c}
 h1{margin:0;font-size:106px;line-height:1.03;font-weight:700;letter-spacing:-3px}
 .title-rule{width:96px;height:5px;background:var(--gold);margin:34px auto 30px}
 .hero-message{font-size:35px;line-height:1.4;font-weight:500;margin:0;letter-spacing:-.35px}
-.welcome-summary{position:absolute;left:88px;right:88px;bottom:216px;padding:35px 32px 36px;text-align:center;border:1px solid #ffffff36;border-radius:12px;background:#103b302c;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 12px 36px #031b171a}
+.welcome-summary{position:absolute;left:88px;right:88px;bottom:216px;padding:35px 32px 36px;text-align:center;border:1px solid #e6fff35c;border-radius:12px;background:#073b31b3;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 12px 36px #031b1720}
 .theme-rule{display:flex;justify-content:center;gap:7px;margin-bottom:24px}
 .theme-rule i{width:48px;height:6px;background:var(--green)}
 .theme-rule i:nth-child(2){background:var(--teal)}

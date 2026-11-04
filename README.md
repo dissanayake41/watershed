@@ -7,7 +7,7 @@ Portrait touchscreen exhibition with three interactive project stories, a Sri La
 **Public exhibition:** [https://dissanayake41.github.io/watershed/](https://dissanayake41.github.io/watershed/)
 
 - Hosted or local server: open `index.html`.
-- Offline kiosk: double-click `OPEN_Watershed_Management_V23_EXHIBITION.html`. Keep the original large portable file intact.
+- Offline kiosk: double-click `OPEN_Watershed_Management_V24_EXHIBITION.html`. Keep the original large portable file intact.
 - Direct project links: `#mahaweli`, `#knuckles`, `#adb`; 3D: `#terrain`; Riverkeeper: `#riverkeeper`.
 - The welcome screen's discreet left-edge control opens the five-option menu. Inside a project, the name in the upper right switches projects directly.
 
@@ -34,3 +34,9 @@ IWMI and CGIAR marks, project imagery, report figures and scientific data retain
 [Open Riverkeeper](https://dissanayake41.github.io/watershed/#riverkeeper). The supplied 4:49 film remains 1920 × 1080, with audio, 68 English caption cues and three chapter shortcuts. Three learning tabs explain water allocation, development choices and learning from monthly outcomes. The game opens at https://dissanayake41.github.io/riverkeeper-play/ in a separate tab.
 
 The film is fetched only on playback or another player action. Closing the section pauses it and restores the welcome landscape. Game outcomes are educational scenarios, not forecasts for the Mahaweli. The film and its stills use illustrative generated imagery alongside game footage. No original project reports, private game source or account data are included.
+
+## Brighter welcome landscape · V24
+
+The main screen uses a new sunlit illustrative landscape with green highlands, blue river water and cultivated terraces, inspired by the Riverkeeper film's palette. Runway animates the existing clouds, foliage and river within that scene. A fixed camera and slow continuous loop keep the screen calm. Navy text replaces the dark full-image shading; the lower message remains on a translucent green pane. Pause/resume and reduced-motion preferences remain supported.
+
+The three project stories, Riverkeeper film, captions, learning tabs, five-option navigation and 3D explorer retain their V23 content. The landscape is an illustrative generated scene, not a photograph or measured representation of a particular location.

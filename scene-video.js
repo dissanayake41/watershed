@@ -5,9 +5,9 @@
   const reduced=matchMedia('(prefers-reduced-motion: reduce)');
   let userPaused=reduced.matches;
   video.muted=true;
-  // Calm exhibition playback: the nine-second landscape takes 22.5 seconds.
-  video.defaultPlaybackRate=0.4;
-  video.playbackRate=0.4;
+  // The bright landscape is prepared as a slow seamless loop at 30 fps.
+  video.defaultPlaybackRate=1;
+  video.playbackRate=1;
   function updateButton(){
     document.body.classList.toggle('motion-paused',userPaused);
     button.setAttribute('aria-pressed',String(userPaused));
