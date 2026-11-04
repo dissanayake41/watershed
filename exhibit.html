@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153d30">
+  <meta name="description" content="Watershed Management at IWMI Open Day. Science for resilient landscapes and water-secure communities.">
+  <title>Watershed Management · IWMI Open Day</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="orbit-menu.css">
+<link rel="stylesheet" href="explorer.css">
+  <link rel="stylesheet" href="adb.css">
+  <link rel="stylesheet" href="projects.css">
+  <link rel="stylesheet" href="presentation.css">
+</head>
+<body>
+  <div class="exhibit">
+    <header class="masthead">
+      <div class="brand-row">
+        <img class="iwmi-logo" src="assets/iwmi.svg" alt="IWMI — International Water Management Institute">
+        <img class="cgiar-logo" src="assets/cgiar.svg" alt="CGIAR">
+      </div>
+      <div class="event-label"><i aria-hidden="true"></i><span>IWMI OPEN DAY</span><i aria-hidden="true"></i></div>
+    </header>
+    <main>
+      <section class="hero" aria-labelledby="booth-title">
+        <img class="hero-photo" src="assets/hero-video-poster.jpg" alt="Illustrative Sri Lankan highlands with forested ridges, mist and a winding river">
+        <video id="landscape-film" class="hero-film" src="assets/watershed-living-landscape.mp4" muted loop playsinline preload="auto" aria-hidden="true" tabindex="-1"></video>
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-copy">
+          <p class="eyebrow">LAND <span>·</span> WATER <span>·</span> PEOPLE</p>
+          <h1 id="booth-title">Watershed<br>Management</h1>
+          <div class="title-rule" aria-hidden="true"></div>
+          <p class="hero-message">Science for resilient landscapes<br>and water-secure communities.</p>
+        </div>
+      </section>
+      <section class="welcome-summary" aria-labelledby="welcome-message">
+        <div class="theme-rule" aria-hidden="true"><i></i><i></i><i></i></div>
+        <h2 id="welcome-message">Healthy landscapes.<br>Secure water.<br>Stronger livelihoods.</h2>
+        <p>Connecting science, planning<br>and communities.</p>
+      </section>
+    </main>
+    <button id="menu-dismiss" class="menu-dismiss" type="button" tabindex="-1" aria-label="Close exploration menu" hidden></button>
+    <button id="menu-toggle" class="menu-toggle" type="button" aria-expanded="false" aria-controls="orbit-navigation" aria-label="Open exploration menu">
+      <span class="handle-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
+      <span class="handle-hint">Explore</span>
+    </button>
+    <nav id="orbit-navigation" class="orbit-navigation" aria-label="Explore our work" aria-hidden="true" inert>
+      <svg class="orbit-rail" viewBox="0 0 840 560" aria-hidden="true"><path d="M125 85 C254 174 254 386 125 475"/><path class="rail-accent" d="M125 85 C254 174 254 386 125 475"/></svg>
+      <button type="button" class="orbit-option option-mahaweli" data-project="mahaweli">
+        <span class="orbit-visual" aria-hidden="true"><span class="orbit-trace"></span><span class="orbit-particles"><i></i><i></i><i></i></span><span class="orbit-photo"><img src="assets/mahaweli.jpg" alt=""></span></span>
+        <span class="orbit-label"><strong>Upper Mahaweli</strong><span>Integrated watershed planning</span></span><span class="orbit-arrow" aria-hidden="true">↗</span>
+      </button>
+      <button type="button" class="orbit-option option-knuckles" data-project="knuckles">
+        <span class="orbit-visual" aria-hidden="true"><span class="orbit-trace"></span><span class="orbit-particles"><i></i><i></i><i></i></span><span class="orbit-photo"><img src="assets/knuckles.jpg" alt=""></span></span>
+        <span class="orbit-label"><strong>Knuckles Mountain Range</strong><span>Water science &amp; climate resilience</span></span><span class="orbit-arrow" aria-hidden="true">↗</span>
+      </button>
+      <button type="button" class="orbit-option option-restoration" data-project="restoration">
+        <span class="orbit-visual" aria-hidden="true"><span class="orbit-trace"></span><span class="orbit-particles"><i></i><i></i><i></i></span><span class="orbit-photo"><img src="assets/uma-oya.jpg" alt=""></span></span>
+        <span class="orbit-label"><strong>Upper Watershed<br>Restoration</strong><span>Science to inform restoration</span></span><span class="orbit-arrow" aria-hidden="true">↗</span>
+      </button>
+      <button type="button" class="orbit-option option-model" data-project="model">
+        <span class="orbit-visual" aria-hidden="true"><span class="orbit-trace"></span><span class="orbit-particles"><i></i><i></i><i></i></span><span class="orbit-photo"><img src="assets/terrain-model.jpg" alt=""></span></span>
+        <span class="orbit-label"><strong>Sri Lanka in 3D</strong><span>From highlands to rivers &amp; reservoirs</span></span><span class="orbit-arrow" aria-hidden="true">↗</span>
+      </button>
+    </nav>
+    <footer class="exhibit-footer">
+      <p>IWMI science. Better water decisions.</p>
+      <div class="footer-controls">
+        <button type="button" id="motion" aria-pressed="false" aria-label="Pause landscape animation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14m6-14v14"/></svg><span>Pause animation</span></button>
+        <i aria-hidden="true"></i>
+        <button type="button" id="fullscreen" aria-label="Enter full screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H3v6m12-6h6v6M3 15v6h6m12-6v6h-6"/></svg><span>Full screen</span></button>
+      </div>
+    </footer>
+  </div>
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <div class="detail-shell">
+      <div class="detail-top"><span>WATERSHED MANAGEMENT</span><button type="button" id="close-detail" aria-label="Close introduction"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div>
+      <div class="detail-photo"><img id="detail-image" src="assets/mahaweli.jpg" alt=""><span id="detail-caption"></span></div>
+      <div class="detail-copy"><p id="detail-kicker"></p><h2 id="detail-title"></h2><p id="detail-summary"></p>
+        <div id="detail-tabs" role="tablist" aria-label="Explore themes"></div>
+        <section id="detail-panel" role="tabpanel" tabindex="0"><h3 id="detail-topic"></h3><p id="detail-text"></p></section>
+        <p id="detail-note"></p>
+      </div>
+      <button type="button" id="back-menu" class="back-menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg>Back to options</button>
+    </div>
+  </dialog>
+
+  <dialog id="map-dialog" aria-labelledby="map-title">
+    <div class="map-shell">
+      <header class="map-header">
+        <div class="map-brand"><img src="assets/iwmi.svg" alt="International Water Management Institute"><span class="map-event">IWMI OPEN DAY</span><button id="close-map" class="map-back" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 12H4m7-7-7 7 7 7"/></svg>Back</button></div>
+        <div class="map-heading"><div><h2 id="map-title">Sri Lanka in 3D</h2><p>Highlands, rivers &amp; reservoirs</p></div><span class="map-live"><i></i><span id="map-focus-label">HIGHLIGHTING LAND ABOVE 300 m</span></span></div>
+      </header>
+      <div id="map-stage" class="map-stage">
+        <canvas id="terrain-canvas" tabindex="0" role="img" aria-label="Interactive Sri Lanka terrain. Drag to rotate, pinch to zoom, two fingers to move. Keyboard: arrows rotate, plus and minus zoom, Home resets." aria-describedby="map-help"></canvas>
+        <div class="map-legend" aria-label="Map colours"><b>Landscape</b><span><i class="natural-land"></i>Natural terrain colours</span><span id="legend-selection"><i class="selected-uplands"></i>Land above 300 m</span><span><i class="water"></i>Rivers &amp; reservoirs</span></div>
+        <div class="map-compass" aria-label="North direction">N<svg id="map-north" viewBox="0 0 60 60" aria-hidden="true"><path d="M30 2 42 50 30 41Z"/><path d="M30 2 18 50 30 41Z"/></svg></div>
+        <div class="map-zoom"><button type="button" id="zoom-in" aria-label="Zoom in">+</button><button type="button" id="zoom-out" aria-label="Zoom out">−</button></div>
+        <div class="map-instructions" id="map-help"><span>Drag to rotate · Pinch to zoom · Two fingers to move</span></div>
+        <div class="map-loading" id="map-loading" role="status"><i aria-hidden="true"></i><p>Preparing your landscape…</p></div>
+      </div>
+      <footer class="map-controls">
+        <div class="terrain-mode" aria-label="Elevation focus">
+          <button type="button" data-terrain-mode="natural" aria-pressed="false">Natural view</button>
+          <button type="button" data-terrain-mode="highlight" aria-pressed="true"><i></i>Highlight &gt;300 m</button>
+          <button type="button" data-terrain-mode="isolate" aria-pressed="false">Only &gt;300 m</button>
+        </div>
+        <div class="map-views" aria-label="Map controls">
+          <button type="button" data-map-view="island" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10V4h6m6 0h6v6M3 15v6h6m6 0h6v-6"/></svg>Whole island</button>
+          <button type="button" data-map-view="highlands" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m2 20 8-15 6 10 3-5 4 10ZM7 11l3 2 3-2"/></svg>Highlands</button>
+          <button type="button" data-map-view="top" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m3 8 9-5 9 5-9 5ZM3 12l9 5 9-5M3 16l9 5 9-5"/></svg>Top view</button>
+          <button type="button" id="map-water" class="water-switch" aria-pressed="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C10 6 5 11 5 15a7 7 0 0 0 14 0c0-4-5-9-7-13Z"/></svg>Water</button>
+        </div>
+        <div class="map-caption"><span>Actual terrain · Relief enlarged 10×</span><button id="map-info" type="button" aria-expanded="false" aria-controls="map-about">About this map</button></div>
+        <div class="map-about" id="map-about" hidden><strong>A landscape you can explore</strong><p>This view uses our terrain, river and reservoir model, including Mannar Island and 136 selected major water bodies. Natural colours and sea shading are illustrative, not satellite imagery or measured bathymetry.</p><p>The highlight uses the unexaggerated SRTM elevation data: only land above 300 metres is selected. “Only >300 m” displays the separate upper part of the print model. Heights are enlarged ten times for visibility; this does not change the 300-metre threshold. Screen meshes are simplified and are not printing files.</p><small>Water-body sources: project mapping (2018) and © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a> (ODbL). This is an exhibition model, not a navigation map.</small></div>
+      </footer>
+    </div>
+  </dialog>
+
+
+  <dialog id="adb-dialog" aria-labelledby="adb-project-title">
+    <div class="adb-shell">
+      <header class="adb-brand"><img src="assets/iwmi.svg" alt="International Water Management Institute"><img src="assets/cgiar.svg" alt="CGIAR"><button type="button" id="close-adb" aria-label="Return to welcome screen">×</button></header>
+      <div class="adb-toolbar"><button class="adb-home" id="adb-home" type="button">← Chapters</button><b id="adb-progress">THE STUDY AT A GLANCE</b><button id="adb-sources" type="button">Sources ⓘ</button></div>
+      <span id="adb-project-title" class="sr-only">Upper Watershed Restoration · ADB hydrological study</span>
+      <main class="adb-body" id="adb-body"></main>
+      <div class="adb-scroll-hint" id="adb-scroll-hint"></div>
+      <footer class="adb-bottom" id="adb-bottom"></footer>
+    </div>
+  </dialog>
+  <dialog class="adb-figure-dialog" id="adb-figure-dialog" aria-labelledby="adb-figure-title">
+    <div class="fig-top"><h3 id="adb-figure-title">Study evidence</h3><button type="button" data-fclose>Close ×</button></div>
+    <div class="adb-figure-viewport"><img alt=""></div>
+    <div class="adb-figure-controls"><button type="button" data-fzoom="-1" aria-label="Zoom figure out">−</button><button type="button" data-fzoom="1" aria-label="Zoom figure in">+</button><button type="button" data-fzoom="0">Reset</button><span>Pinch to zoom · Drag to move</span></div>
+  </dialog>
+
+  <div id="status" class="sr-only" role="status"></div>
+  <script src="app.js"></script>
+  <script src="scene-video.js"></script>
+  <script src="explorer.js"></script>
+  <script src="orbit-menu.js"></script>
+  <script src="adb-data.js"></script>
+  <script src="adb.js"></script>
+  <script src="projects-data.js"></script>
+  <script src="projects.js"></script>
+  <script src="presentation.js"></script>
+</body>
+</html>

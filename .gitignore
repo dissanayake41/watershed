@@ -1,0 +1,7 @@
+qa/
+*.log
+research/
+research_projects/
+OPEN_*.html
+EXHIBIT_3D_OFFLINE.html
+.env*

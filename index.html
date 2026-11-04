@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#123d2e">
+  <title>Watershed Management · Portrait Exhibit</title>
+  <link rel="icon" href="data:,">
+  <style>
+    *{box-sizing:border-box}
+    html,body{width:100%;height:100%;margin:0;overflow:hidden;background:#123d2e}
+    body{display:grid;place-items:center}
+    .screen{position:relative;overflow:hidden;width:56.25vh;height:100vh;max-width:100vw;max-height:177.777778vw}
+    iframe{position:absolute;inset:0;width:1080px;height:1920px;border:0;transform-origin:0 0;background:#123d2e}
+    noscript{position:absolute;color:white;font:18px Arial;padding:24px}
+  </style>
+</head>
+<body>
+  <div class="screen" id="screen">
+    <iframe id="portrait-exhibit" title="Watershed Management — portrait welcome screen" src="exhibit.html" allow="fullscreen; autoplay" allowfullscreen></iframe>
+  </div>
+  <noscript>Please enable JavaScript to view the exhibit.</noscript>
+  <script>
+    const screen = document.getElementById('screen');
+    const frame = document.getElementById('portrait-exhibit');
+    function fitPortrait(){
+      const scale = Math.min(document.documentElement.clientWidth / 1080, document.documentElement.clientHeight / 1920);
+      screen.style.width = (1080 * scale) + 'px';
+      screen.style.height = (1920 * scale) + 'px';
+      frame.style.transform = 'scale(' + scale + ')';
+    }
+    window.addEventListener('resize',fitPortrait);
+    document.addEventListener('fullscreenchange',fitPortrait);
+    fitPortrait();
+    window.addEventListener('load',()=>{if(location.hash==='#terrain')frame.contentWindow.postMessage('iwmi-open-terrain','*');if(location.hash==='#adb')frame.contentWindow.postMessage('iwmi-open-adb','*');if(['#mahaweli','#knuckles'].includes(location.hash))frame.contentWindow.postMessage('iwmi-open-'+location.hash.slice(1),'*');});
+  </script>
+</body>
+</html>
