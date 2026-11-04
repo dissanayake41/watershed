@@ -14,7 +14,7 @@
  const originalStudy={data:D,photos,chapters};
  const studyRegistry={};let activeStudy=null;
  const dialog=document.getElementById('adb-dialog'),body=document.getElementById('adb-body'),bottom=document.getElementById('adb-bottom');
- let chapter=-1,topic=0,trigger=null,returnPage=null;
+ let chapter=-1,topic=0,trigger=null,returnPage=null,returnToDashboard=false;
  const scrollHint=document.getElementById('adb-scroll-hint');
  function updateScrollHint(){scrollHint.textContent=body.scrollHeight>body.clientHeight+20?(body.scrollTop+body.clientHeight<body.scrollHeight-25?'Swipe up for more evidence ↓':'End of this view · choose a topic or continue'):'Touch an option to explore';}
  body.addEventListener('scroll',updateScrollHint,{passive:true});new MutationObserver(()=>requestAnimationFrame(updateScrollHint)).observe(body,{childList:true,subtree:true});
@@ -54,14 +54,16 @@
  }
  window.StudyUI={intro,takeaway,source,note,metrics,list,flow,figure,bindFigures,setContent,barChart,lineChart,mapWidget,esc,fmt,$,$$,openPage};
  window.registerStudyProject=(key,config)=>{studyRegistry[key]=config;};
- window.openStudyExplorer=function(key,button){
+ window.openStudyExplorer=function(key,button,options={}){
+  returnToDashboard=Boolean(options.returnToDashboard);
+  document.getElementById('close-adb').setAttribute('aria-label',returnToDashboard?'Back to ADB dashboard':'Return to welcome screen');
   activeStudy=studyRegistry[key]||null;
   const config=activeStudy||originalStudy;D=config.data;photos=config.photos;chapters=config.chapters;
   dialog.dataset.study=activeStudy?key:'adb';
   document.getElementById('adb-project-title').textContent=activeStudy?activeStudy.plainTitle:'Upper Watershed Restoration · ADB hydrological study';
   trigger=button;returnPage=null;document.body.classList.add('detail-open');if(!dialog.open)dialog.showModal();openPage(-1);window.dispatchEvent(new Event('exhibit-detail-change'));document.getElementById('close-adb').focus({preventScroll:true});
  };
- window.openADBExplorer=button=>window.openStudyExplorer('adb',button);
+ window.openADBExplorer=(button,options)=>window.openStudyExplorer('adb',button,options);
  function designOverview(){
   const config=activeStudy||{title:'Upper Watershed<br>Restoration',plainTitle:'Upper Watershed Restoration',heroAlt:'Uma Oya project landscape',subtitle:'Science to guide where and how to restore the watershed.',overviewTitle:'Follow the evidence.',overviewText:'From a rapid assessment of eight reservoir basins to practical choices for Uma Oya. Touch any chapter to explore.',metrics:[['8','reservoir basins screened'],['38','Uma Oya sub-basins'],['21','water-quality locations']]};
   window.ExhibitionDesign.overview({key:dialog.dataset.study,config,chapters,navigate:openPage});
@@ -76,8 +78,8 @@
 
  document.getElementById('close-adb').onclick=()=>dialog.close();
  document.getElementById('adb-home').onclick=()=>openPage(-1);
- dialog.addEventListener('close',()=>{document.body.classList.remove('detail-open');window.dispatchEvent(new Event('exhibit-detail-change'));if(trigger)trigger.focus({preventScroll:true});});
- window.addEventListener('message',e=>{if(e.source===parent&&e.data==='iwmi-open-adb'){const toggle=document.getElementById('menu-toggle');if(toggle.getAttribute('aria-expanded')!=='true')toggle.click();document.querySelector('[data-project="restoration"]').click();}});
+ dialog.addEventListener('close',()=>{document.body.classList.remove('detail-open');window.dispatchEvent(new Event('exhibit-detail-change'));if(returnToDashboard&&window.openADBDashboard){returnToDashboard=false;window.openADBDashboard(trigger);}else if(trigger)trigger.focus({preventScroll:true});});
+ window.addEventListener('message',e=>{if(e.source===parent&&e.data==='iwmi-open-adb'){window.openADBExplorer(document.querySelector('[data-project="dashboard"]'));}});
  document.getElementById('adb-sources').onclick=()=>{returnPage=[chapter,topic];sourcesPage();};
 
  // Reusable charts. Every data mark is keyboard- and touch-selectable.

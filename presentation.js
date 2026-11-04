@@ -35,7 +35,7 @@
  switcher.innerHTML='<p class="ex-eyebrow">THREE LANDSCAPES. CONNECTED BY WATER.</p>'+Object.entries(media).map(([key,m])=>`<button type="button" data-switch-study="${key}" aria-current="false"><img src="${m.image}" alt=""><span><b>${m.short}</b><small>${m.label}</small></span>${arrow}</button>`).join('');shell.append(switcher);
  const toggle=document.getElementById('ex-project-toggle');const closeSwitch=()=>{switcher.hidden=true;toggle.setAttribute('aria-expanded','false');};
  toggle.onclick=()=>{switcher.hidden=!switcher.hidden;toggle.setAttribute('aria-expanded',!switcher.hidden);};
- switcher.querySelectorAll('button').forEach(b=>b.onclick=()=>{closeSwitch();window.openStudyExplorer(b.dataset.switchStudy,document.querySelector('[data-project="'+(b.dataset.switchStudy==='adb'?'restoration':b.dataset.switchStudy)+'"]'));});
+ switcher.querySelectorAll('button').forEach(b=>b.onclick=()=>{closeSwitch();window.openStudyExplorer(b.dataset.switchStudy,document.querySelector('[data-project="'+(b.dataset.switchStudy==='adb'?'dashboard':b.dataset.switchStudy)+'"]'));});
  document.getElementById('adb-dialog').addEventListener('click',e=>{if(!switcher.hidden&&!switcher.contains(e.target)&&!toggle.contains(e.target))closeSwitch();});
  document.getElementById('adb-dialog').addEventListener('close',closeSwitch);
  document.getElementById('adb-dialog').addEventListener('keydown',e=>{if(e.key==='Escape'&&!switcher.hidden){e.preventDefault();closeSwitch();toggle.focus();}});

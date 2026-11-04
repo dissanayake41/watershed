@@ -1,9 +1,9 @@
-/* V26: a three-view briefing, separate from the complete study. */
-.orbit-navigation{top:630px;height:710px}.orbit-rail{height:710px}
-.orbit-option{height:100px;margin-top:-50px;margin-left:-50px}.orbit-visual{width:100px;height:100px}.orbit-photo{width:92px;height:92px}
-.option-mahaweli{left:125px;top:70px}.option-knuckles{left:211px;top:180px}.option-restoration{left:252px;top:290px}
-.option-dashboard{--accent:#f3c86e;--delay:160ms;left:252px;top:400px}.option-model{left:211px;top:510px}.option-riverkeeper{left:125px;top:620px}
-.option-dashboard .orbit-photo{background:#163f50;display:grid;place-items:center}.option-dashboard .orbit-photo svg{width:51px;height:51px;stroke:#f3c86e;stroke-width:1.4}
+/* V27: five photographic options; the full ADB study is inside its dashboard. */
+.orbit-navigation{top:670px;height:650px}.orbit-rail{height:650px}
+.orbit-option{height:116px;margin-top:-58px;margin-left:-58px}.orbit-visual{width:116px;height:116px}.orbit-photo{width:108px;height:108px}
+.option-mahaweli{left:125px;top:70px}.option-knuckles{left:222px;top:196px}
+.option-dashboard{--accent:#f3c86e;--delay:120ms;left:254px;top:322px}.option-model{--delay:180ms;left:222px;top:448px}.option-riverkeeper{--delay:240ms;left:125px;top:574px}
+.option-dashboard .orbit-photo img{object-position:46% 50%}
 .orbit-label strong{font-size:29px}.orbit-label>span{font-size:19px}.menu-dismiss:before{top:360px;height:900px}
 #adb-dashboard{--d-ink:#173e51;--d-muted:#506671;--d-line:#d5dedb;--d-paper:#f7f7f1;--d-gold:#ce852e;--d-teal:#168d94;--d-red:#c86536;position:fixed;inset:0;margin:0;border:0;padding:0;width:1080px;height:1920px;max-width:none;max-height:none;background:var(--d-paper);color:var(--d-ink);font-family:Arial,Helvetica,sans-serif;overflow:hidden}
 #adb-dashboard::backdrop{background:#123d2e}
@@ -52,3 +52,22 @@
 .dash-quality>div{padding:12px 14px;background:#e1f3f5;border-bottom:4px solid #0297a6}.dash-quality>div:last-child{background:#e6f5eb;border-color:#22ad7a}.dash-quality strong{color:#28537d;font-size:36px}.dash-quality{gap:12px;margin:13px 0}.dash-quality-label{font-size:19px}
 .dash-climate{border-top:5px solid #46bbd4;background:linear-gradient(150deg,#eff9fb,#fff 68%)}.dash-climate-metrics button[aria-pressed=true]{border-color:#0297a6}.dash-climate-insight strong{color:#b45224}.dash-reduction{color:#187e5e}.dash-options img{border-bottom:5px solid #22ad7a}.dash-pair>div b{color:#187e5e}
 .dash-footer{border-top:3px solid var(--view-accent)}.dash-footer #dash-full-study{background:#28537d;border-color:#28537d}.dash-footer #dash-sources{border-color:var(--view-accent);background:var(--view-light)}
+
+/* Native 30 m hotspot cells, with the exact study boundary. */
+.dash-hotspot-figure{margin-top:15px}.hotspot-stage{position:relative;background:#f5f8f4;overflow:hidden;max-width:425px;margin-inline:auto}
+.hotspot-stage svg{display:block;width:100%;aspect-ratio:1;max-height:425px;touch-action:none;user-select:none}
+.hotspot-north{font:25px Arial;fill:#28537d}.hotspot-north text:last-child{font-size:34px}
+.hotspot-scale{position:absolute;left:0;bottom:5%;width:100%;pointer-events:none;color:#28537d}
+.hotspot-scale-line{display:block;height:9px;border:2px solid #28537d;border-top:0;margin-left:5%}
+.hotspot-scale small{display:block;margin-left:5%;margin-top:3px;font:15px Arial}
+.hotspot-key{display:flex;flex-wrap:wrap;gap:8px 15px;padding-top:12px;font-size:15px;color:#415c67}
+.hotspot-key span{display:flex;align-items:center;gap:6px}.hotspot-key i{display:inline-block;width:15px;height:15px;border:1px solid #28537d22}
+#adb-dashboard .hotspot-readout{font-size:17px;line-height:1.35;color:#28537d;min-height:48px;margin-top:10px}
+.dash-sheet .dash-hotspot-figure{margin-top:0}.dash-sheet .hotspot-stage{max-width:none}.dash-sheet .hotspot-stage svg{max-height:none}
+.dash-sheet .hotspot-key{font-size:21px;gap:16px}.dash-sheet .hotspot-key i{width:21px;height:21px}
+.dash-sheet .hotspot-scale small{font-size:22px}.dash-sheet .hotspot-scale-line{height:13px}
+.hotspot-tools{display:flex;align-items:center;gap:12px;margin-top:23px}
+.hotspot-tools button{min-width:65px;min-height:65px;border:1px solid #a8c0c8;background:white;color:#28537d;font:25px Arial;padding:12px 19px}
+.hotspot-tools span{margin-left:auto;font-size:20px;color:#526a70}.dash-sheet .hotspot-readout{font-size:24px;line-height:1.4;min-height:70px;margin-top:23px}
+.dash-sheet .hotspot-stage{cursor:grab}.dash-sheet .hotspot-stage:active{cursor:grabbing}
+.dash-findings{padding-bottom:15px}.dash-findings .dash-panel{gap:17px}.dash-findings .dash-evidence>section{padding-block:20px}.dash-findings .dash-hotspot-figure{margin-top:9px}

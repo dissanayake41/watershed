@@ -32,13 +32,13 @@
 .option-model .orbit-photo img{object-position:50% 42%}
 .orbit-trace{position:absolute;inset:-7px;border:1px solid var(--accent);border-radius:50%;opacity:.28}
 .orbit-trace:before{content:"";position:absolute;inset:-1px;border-radius:50%;border:2px solid transparent;border-right-color:var(--accent);transform:rotate(-40deg);opacity:.85}
-.orbit-particles{position:absolute;inset:-7px;border-radius:50%;animation:particle-orbit 18s linear infinite;animation-play-state:paused;pointer-events:none}
-.option-knuckles .orbit-particles{animation-duration:23s;animation-direction:reverse}
+.orbit-particles{position:absolute;inset:-7px;border-radius:50%;animation:particle-orbit 13s linear infinite;animation-play-state:paused;pointer-events:none}
+.option-knuckles .orbit-particles{animation-duration:17s;animation-direction:reverse}
 .option-restoration .orbit-particles{animation-duration:21s;animation-delay:-7s}
-.option-model .orbit-particles{animation-duration:26s;animation-direction:reverse;animation-delay:-12s}
-.orbit-particles i{position:absolute;width:5px;height:5px;border-radius:50%;left:50%;top:-2px;margin-left:-2.5px;background:var(--accent);box-shadow:0 0 7px var(--accent)}
-.orbit-particles i:nth-child(2){width:3px;height:3px;left:6.7%;top:75%;opacity:.6;box-shadow:none}
-.orbit-particles i:nth-child(3){width:2px;height:2px;left:93.3%;top:75%;opacity:.45;box-shadow:none}
+.option-model .orbit-particles{animation-duration:18s;animation-direction:reverse;animation-delay:-12s}
+.orbit-particles i{position:absolute;width:8px;height:8px;border-radius:50%;left:50%;top:-4px;margin-left:-4px;background:var(--accent);box-shadow:0 0 7px var(--accent)}
+.orbit-particles i:nth-child(2){width:5px;height:5px;left:6.7%;top:75%;opacity:.8;box-shadow:none}
+.orbit-particles i:nth-child(3){width:4px;height:4px;left:93.3%;top:75%;opacity:.6;box-shadow:none}
 .orbit-navigation.is-open .orbit-particles{animation-play-state:running}
 .motion-paused .orbit-particles,.page-hidden .orbit-particles,.detail-open .orbit-particles{animation-play-state:paused!important}
 .orbit-label{padding-left:24px;padding-right:12px;display:flex;flex-direction:column;gap:7px;text-shadow:0 2px 12px #06222688}
@@ -75,3 +75,10 @@
 #detail-dialog[data-project=model] .detail-photo img{object-fit:contain}
 #detail-dialog[data-project=model] .detail-photo>span{font-size:18px;bottom:14px}
 @media(prefers-reduced-motion:reduce){.orbit-option,.orbit-navigation,.menu-toggle>svg{transition:none!important}.orbit-particles,.menu-dismiss:before{animation:none!important}}
+
+/* Independent, visible orbital accents; video buffering does not disable these. */
+.orbit-trace{opacity:.48}.orbit-trace:before{animation:particle-orbit 22s linear infinite;animation-play-state:paused}
+.option-dashboard .orbit-particles{animation-duration:15s;animation-delay:-4s}.option-riverkeeper .orbit-particles{animation-duration:16s;animation-delay:-9s}
+.orbit-navigation.is-open .orbit-trace:before{animation-play-state:running}
+.motion-paused .orbit-trace:before,.page-hidden .orbit-trace:before,.detail-open .orbit-trace:before{animation-play-state:paused!important}
+@media(prefers-reduced-motion:reduce){.orbit-trace:before{animation:none!important}}
