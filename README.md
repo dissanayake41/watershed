@@ -1,46 +1,34 @@
-# Upper Watershed Management — IWMI Open Day
+# Upper Watershed Management — V26 ADB dashboard preview
 
-Portrait touchscreen exhibition with three interactive project stories, a Sri Lanka 3D terrain explorer and Riverkeeper.
+Live exhibition: https://dissanayake41.github.io/watershed/
+Dashboard: https://dissanayake41.github.io/watershed/#adb-dashboard
 
-## Open
+V26 adds a separate ADB dashboard to the six-option exploration menu. The original detailed ADB study, Upper Mahaweli, Knuckles, 3D terrain and Riverkeeper remain available. V25 welcome artwork, animation and title are unchanged.
 
-**Public exhibition:** [https://dissanayake41.github.io/watershed/](https://dissanayake41.github.io/watershed/)
+## Three presentation views
 
-- Hosted or local server: open `index.html`.
-- Offline kiosk: double-click `OPEN_Upper_Watershed_Management_V25.html`. Keep the original large portable file intact.
-- Direct project links: `#mahaweli`, `#knuckles`, `#adb`; 3D: `#terrain`; Riverkeeper: `#riverkeeper`.
-- The welcome screen's discreet left-edge control opens the five-option menu. Inside a project, the name in the upper right switches projects directly.
+1. Basin priorities: linked eight-basin map and vulnerability ranking, followed by the Uma Oya selection rationale.
+2. Uma Oya findings: linked sub-basin sediment map and leading contributions, shared hotspots, seasonal river flow and measured pesticide detections.
+3. Restoration outlook: monthly climate projections, a separate conservation comparison and practical planning implications.
 
-## Design and content
+Tap a map or bar to select an area. Enlarge maps for smaller sub-basins. Tap a month for its data. Sources & scope identifies report tables, periods and limitations. Open detailed study returns to the complete ADB presentation.
 
-V22 preserves the 60 approved V21 topics and scientific datasets. It adds photographic project entrances, a chapter index with circular image previews, compact chapter headers, clearer chart/map controls and distinct green, teal and amber project accents. The source reports distinguish model estimates, observations, planned work and completed results; those distinctions are retained.
+## Colour system
 
-Designed at 1080 × 1920 and scaled to the available screen. JavaScript is required. The 3D explorer requires WebGL. No analytics, external fonts or runtime CDN dependencies are used.
+Each view uses a distinct IWMI accent pair: orange/gold for basin priorities, teal/green for findings, and green/sky blue for the outlook. Codes were checked against https://branding.iwmi.org/our-colours/. Ordered map colours show vulnerability or contribution classes; colours are not satellite land cover.
 
-## Static hosting
+## Evidence
 
-Publish `index.html`, `exhibit.html`, root JavaScript/CSS files, `.nojekyll`, `assets/` and `vendor/`. Do not publish `qa/`, research extracts or the generated portable HTML files. GitHub Pages can serve the root directory of a `main` branch. All runtime paths are relative and support repository subpaths.
+The dashboard uses the existing approved ADB_DATA geometry/statistics and report values already in adb.js. Primary sources: Rapid Assessment (8 May 2026), Eco-Hydrological Assessment (August 2026), and Final Report (26 October 2026). Source reports and research folders are not published.
+
+Measured water quality, modelled flows and erosion, and future scenarios are explicitly distinguished. Conservation benefits are potential modelled effects; no completed intervention or measured restoration impact is claimed. InVEST and SWAT+ estimates are not combined. Climate and conservation scenarios are separate comparisons.
+
+## Local use
+
+Open OPEN_Upper_Watershed_Management_V26.html for the complete portable offline exhibition; select ADB dashboard. All assets are embedded. The new dashboard requires no external library or service.
+
+The Web ZIP contains index.html and its local assets. Serve its folder over HTTP, or publish the static files through GitHub Pages. No build step is required.
 
 ## Verification
 
-60 topics checked on the live GitHub Pages site in Edge: no JavaScript errors, missing images, invalid chart values or horizontal overflow. Offline touch checks cover map selection and zoom, figure pinch gestures, project switching, video pause/resume and the 1,040,000-triangle terrain model. The working `qa/` folder contains the detailed results and screenshots.
-
-## Assets and rights
-
-IWMI and CGIAR marks, project imagery, report figures and scientific data retain their owners' rights. Do not assume this repository grants a reuse license. The welcome landscape is illustrative generated media; report photography and source maps retain their provenance in each project's source notes. Three.js licensing is included under `vendor/`.
-
-## Riverkeeper · V23
-
-[Open Riverkeeper](https://dissanayake41.github.io/watershed/#riverkeeper). The supplied 4:49 film remains 1920 × 1080, with audio, 68 English caption cues and three chapter shortcuts. Three learning tabs explain water allocation, development choices and learning from monthly outcomes. The game opens at https://dissanayake41.github.io/riverkeeper-play/ in a separate tab.
-
-The film is fetched only on playback or another player action. Closing the section pauses it and restores the welcome landscape. Game outcomes are educational scenarios, not forecasts for the Mahaweli. The film and its stills use illustrative generated imagery alongside game footage. No original project reports, private game source or account data are included.
-
-## Brighter welcome landscape · V24
-
-The main screen uses a new sunlit illustrative landscape with green highlands, blue river water and cultivated terraces, inspired by the Riverkeeper film's palette. Runway animates the existing clouds, foliage and river within that scene. A fixed camera and slow continuous loop keep the screen calm. Navy text replaces the dark full-image shading; the lower message remains on a translucent green pane. Pause/resume and reduced-motion preferences remain supported.
-
-The three project stories, Riverkeeper film, captions, learning tabs, five-option navigation and 3D explorer retain their V23 content. The landscape is an illustrative generated scene, not a photograph or measured representation of a particular location.
-
-## Title and playback correction · V25
-
-The welcome title is **Upper Watershed Management**. The approved Runway landscape now plays at its native pace, using a 9-second forward loop at 24 fps. Its optimized 1080 × 1804 H.264 file is 2.82 MB, reduced from 7.22 MB. The entire clip is buffered locally before playback, so repeat loops do not depend on further network requests. The large message pane retains its translucent appearance without a live backdrop-blur filter. Pause, reduced-motion, background-tab and project-dialog behavior remain supported. All project content is unchanged.
+Three 1080 x 1920 portrait views fit without scrolling. Map/bar selection, keyboard access, enlarged maps, month values, climate switching, detailed-study handoff, and background-video pause were checked. Existing scientific modules and all media assets match V25 byte for byte. Screenshots and checks are in qa/ in the local delivery folder; they are not published.
