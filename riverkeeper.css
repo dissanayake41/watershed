@@ -1,0 +1,72 @@
+/* Riverkeeper: a film-led learning space in the portrait exhibition. */
+.orbit-navigation{top:670px;height:650px}
+.hero-message{transition:opacity .2s}
+.exploration-open .hero-message{opacity:0;visibility:hidden}
+.orbit-rail{height:650px}
+.option-mahaweli{left:125px;top:70px}
+.option-knuckles{left:222px;top:196px}
+.option-restoration{left:254px;top:322px}
+.option-model{left:222px;top:448px}
+.option-riverkeeper{--accent:#46bbd4;--delay:240ms;left:125px;top:574px}
+.option-riverkeeper .orbit-photo img{object-position:100% 50%;transform:scale(1.4);transform-origin:80% 55%}
+.option-riverkeeper:hover .orbit-photo img,.option-riverkeeper:focus-visible .orbit-photo img{transform:scale(1.45)}
+.option-riverkeeper .orbit-particles{animation-duration:29s;animation-delay:-9s}
+.menu-dismiss:before{top:395px;height:850px}
+#riverkeeper-dialog{--rk-navy:#153e55;--rk-teal:#0297a6;--rk-paper:#f8f8f3;position:fixed;inset:0;margin:0;width:100%;height:100%;max-width:none;max-height:none;border:0;padding:0;color:var(--rk-navy);background:var(--rk-paper);overflow:hidden}
+#riverkeeper-dialog::backdrop{background:#062c39d9}
+.rk-shell{height:100%;display:flex;flex-direction:column}
+.rk-brand{height:132px;flex:none;display:flex;align-items:center;gap:32px;padding:26px 42px;background:#fff;border-bottom:1px solid #d5dfdc}
+.rk-brand>img:first-child{width:305px;height:61px;object-fit:contain}
+.rk-brand>img:nth-child(2){width:115px;height:51px;object-fit:contain}
+.rk-brand>span{margin-left:auto;font-size:22px;color:#28537d}
+.rk-close{flex:none;width:80px;height:80px;border:1px solid #aabbbd;border-radius:50%;background:transparent;color:var(--rk-navy);font-size:38px;display:grid;place-items:center}
+.rk-body{flex:1;overflow-y:auto;overscroll-behavior:contain;scrollbar-width:thin}
+.rk-intro{padding:35px 52px 29px;position:relative}
+.rk-eyebrow{display:block;margin:0 0 12px;font-size:18px;letter-spacing:3px;font-weight:600;color:#027987}
+.rk-intro h1{font:82px/1.04 Georgia,serif;letter-spacing:-1.7px;font-weight:400;margin:0 0 16px}
+.rk-intro>p{max-width:900px;font-size:28px;line-height:1.42;margin:0;color:#536f75}
+.rk-intro:after{content:"";position:absolute;right:56px;top:45px;width:76px;height:76px;border:1px solid #46bbd455;border-radius:50%;box-shadow:0 0 0 12px #46bbd411,0 0 0 25px #46bbd409;pointer-events:none}
+.rk-player{margin:0 48px;background:#10394b;color:white;position:relative}
+.rk-film-stage{position:relative;aspect-ratio:16/9;background:#082a39;isolation:isolate}
+.rk-film-stage video{width:100%;height:100%;display:block;object-fit:contain}
+.rk-film-stage video::cue{font:24px/1.35 Arial,sans-serif;color:white;background:#052b40de}
+.rk-film-stage:fullscreen{width:100vw;height:100vh;aspect-ratio:auto}
+.rk-film-stage:fullscreen video{height:100vh}
+.rk-film-overlay{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:19px;border:0;background:linear-gradient(0deg,#041e346b,transparent 75%);color:white;font-size:28px;cursor:pointer}
+.rk-film-overlay[hidden]{display:none}
+.rk-film-overlay>svg{height:100px;width:100px;padding:30px;border:1px solid #ffffffb3;border-radius:50%;background:#103b55cf;box-shadow:0 8px 50px #00203444;fill:#fff}
+.rk-film-overlay>span{background:#062b3fc7;padding:8px 18px}
+.rk-video-controls{display:flex;align-items:center;gap:18px;min-height:88px;padding:5px 22px}
+.rk-video-controls button{min-width:80px;min-height:80px;display:flex;justify-content:center;align-items:center;gap:10px;border:0;background:transparent;color:white;font-size:21px;border-radius:0}
+.rk-video-controls button:first-child{min-width:160px;justify-content:flex-start}
+.rk-video-controls svg{width:26px;height:26px;fill:none;stroke:currentColor;stroke-width:1.7}
+.rk-video-controls [aria-pressed=true]{color:#8be4ec}
+.rk-video-controls button:hover{background:#ffffff10}
+.rk-video-controls time{font-size:21px;white-space:nowrap;margin-left:auto;color:#d5e8e8;font-variant-numeric:tabular-nums}
+.rk-video-controls .rk-cc{font-weight:700;font-size:22px;letter-spacing:.5px}
+.rk-seek-label{display:flex;align-items:center;gap:18px;padding:0 25px 14px;font-size:18px}
+.rk-seek-label input{flex:1;min-width:0;height:42px;accent-color:#46bbd4;cursor:pointer}
+.rk-video-notice{margin:0;padding:0 25px 20px;color:#e4f0ef;font-size:21px;line-height:1.4}
+.rk-video-notice:empty{display:none}
+.rk-chapters{display:grid;grid-template-columns:1fr 1fr 1fr;margin:0 48px;padding:0;border-bottom:1px solid #cbdad7}
+.rk-chapters button{min-height:111px;display:flex;gap:14px;align-items:center;padding:17px 18px;text-align:left;background:transparent;border:0;border-bottom:3px solid transparent;color:#547278}
+.rk-chapters button[aria-pressed=true]{border-bottom-color:var(--rk-teal);color:var(--rk-navy)}
+.rk-chapters time{font-size:19px;color:#027987;font-variant-numeric:tabular-nums}
+.rk-chapters strong{font:24px/1.18 Georgia,serif;font-weight:400;display:block}
+.rk-learn{padding:31px 52px 24px}
+.rk-learn h2{font:42px/1.1 Georgia,serif;font-weight:400;margin:0 0 21px;letter-spacing:-.5px}
+.rk-themes{display:flex;gap:27px;border-bottom:1px solid #cbdad7}
+.rk-themes button{flex:1;min-height:80px;padding:12px 0;border:0;border-bottom:3px solid transparent;text-align:left;background:none;color:#678187;font-size:23px;line-height:1.2}
+.rk-themes button[aria-selected=true]{color:#006e7b;border-bottom-color:#0297a6;font-weight:600}
+.rk-theme-panel{display:grid;grid-template-columns:220px 1fr;gap:30px;align-items:center;padding:24px 0 11px;min-height:230px}
+.rk-theme-panel img{width:220px;height:172px;object-fit:cover;object-position:50% 50%;border-radius:50%;border:1px solid #b9d4d1;padding:6px}
+.rk-theme-panel h3{font:29px/1.2 Georgia,serif;font-weight:400;margin:0 0 10px}
+.rk-theme-panel p{font-size:24px;line-height:1.45;margin:0;color:#4d6b72;max-width:650px}
+.rk-context{margin:0 52px 25px;padding-top:17px;border-top:1px solid #d9e2df;font-size:19px;line-height:1.45;color:#718588}
+.rk-footer{flex:none;display:flex;align-items:center;justify-content:space-between;gap:25px;min-height:119px;padding:20px 42px;background:#fff;border-top:1px solid #cbdad7}
+.rk-footer p{font:27px/1.2 Georgia,serif;margin:0}
+.rk-footer small{display:block;font:19px/1.3 Arial,sans-serif;margin-top:8px;color:#6e8586}
+.rk-play-link{display:flex;align-items:center;justify-content:center;gap:28px;min-height:78px;padding:18px 27px;background:#28537d;color:white;text-decoration:none;font-size:25px;white-space:nowrap}
+.rk-play-link svg{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.7}
+#riverkeeper-dialog button:focus-visible,#riverkeeper-dialog a:focus-visible,#riverkeeper-dialog input:focus-visible{outline:3px solid #dd9103;outline-offset:5px}
+@media(prefers-reduced-motion:no-preference){.rk-theme-panel{animation:rk-reveal .32s ease both}@keyframes rk-reveal{from{opacity:.35;transform:translateY(6px)}to{opacity:1;transform:none}}}

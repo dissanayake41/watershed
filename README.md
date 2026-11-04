@@ -1,15 +1,15 @@
 # Watershed Management — IWMI Open Day
 
-Portrait touchscreen exhibition with three interactive project stories and a Sri Lanka 3D terrain explorer.
+Portrait touchscreen exhibition with three interactive project stories, a Sri Lanka 3D terrain explorer and Riverkeeper.
 
 ## Open
 
 **Public exhibition:** [https://dissanayake41.github.io/watershed/](https://dissanayake41.github.io/watershed/)
 
 - Hosted or local server: open `index.html`.
-- Offline kiosk: double-click `OPEN_Watershed_Management_V22_EXHIBITION.html`. Keep the original large portable file intact.
-- Direct project links: `#mahaweli`, `#knuckles`, `#adb`; 3D: `#terrain`.
-- The welcome screen's discreet left-edge control opens the four-option menu. Inside a project, the name in the upper right switches projects directly.
+- Offline kiosk: double-click `OPEN_Watershed_Management_V23_EXHIBITION.html`. Keep the original large portable file intact.
+- Direct project links: `#mahaweli`, `#knuckles`, `#adb`; 3D: `#terrain`; Riverkeeper: `#riverkeeper`.
+- The welcome screen's discreet left-edge control opens the five-option menu. Inside a project, the name in the upper right switches projects directly.
 
 ## Design and content
 
@@ -28,3 +28,9 @@ Publish `index.html`, `exhibit.html`, root JavaScript/CSS files, `.nojekyll`, `a
 ## Assets and rights
 
 IWMI and CGIAR marks, project imagery, report figures and scientific data retain their owners' rights. Do not assume this repository grants a reuse license. The welcome landscape is illustrative generated media; report photography and source maps retain their provenance in each project's source notes. Three.js licensing is included under `vendor/`.
+
+## Riverkeeper · V23
+
+[Open Riverkeeper](https://dissanayake41.github.io/watershed/#riverkeeper). The supplied 4:49 film remains 1920 × 1080, with audio, 68 English caption cues and three chapter shortcuts. Three learning tabs explain water allocation, development choices and learning from monthly outcomes. The game opens at https://dissanayake41.github.io/riverkeeper-play/ in a separate tab.
+
+The film is fetched only on playback or another player action. Closing the section pauses it and restores the welcome landscape. Game outcomes are educational scenarios, not forecasts for the Mahaweli. The film and its stills use illustrative generated imagery alongside game footage. No original project reports, private game source or account data are included.

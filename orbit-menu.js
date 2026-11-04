@@ -57,6 +57,7 @@
   let menuOpen=false, activeProject=null, lastChoice=null;
   function setMenu(open,returnFocus=true){
     menuOpen=open;
+    document.body.classList.toggle('exploration-open',open);
     toggle.setAttribute('aria-expanded',String(open));
     toggle.setAttribute('aria-label',open?'Close exploration menu':'Open exploration menu');
     nav.setAttribute('aria-hidden',String(!open));nav.inert=!open;
@@ -66,10 +67,10 @@
   toggle.addEventListener('click',()=>setMenu(!menuOpen));
   dismiss.addEventListener('click',()=>setMenu(false));
   document.addEventListener('pointerdown',event=>{
-    if(menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!nav.contains(event.target)&&!toggle.contains(event.target)&&!event.target.closest('.exhibit-footer'))setMenu(false,false);
+    if(menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!document.getElementById('riverkeeper-dialog')?.open&&!nav.contains(event.target)&&!toggle.contains(event.target)&&!event.target.closest('.exhibit-footer'))setMenu(false,false);
   });
   document.addEventListener('keydown',event=>{
-    if(event.key==='Escape'&&menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open){event.preventDefault();setMenu(false);}
+    if(event.key==='Escape'&&menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!document.getElementById('riverkeeper-dialog')?.open){event.preventDefault();setMenu(false);}
   });
   toggle.addEventListener('keydown',event=>{
     if(event.key==='ArrowRight'||event.key==='ArrowDown'){event.preventDefault();setMenu(true);choices[0].focus({preventScroll:true});}
@@ -96,6 +97,7 @@
     if((key==='mahaweli'||key==='knuckles')&&window.openStudyExplorer){window.openStudyExplorer(key,trigger);return;}
     if(key==='restoration'){window.openADBExplorer(trigger);return;}
     if(key==='model'){window.openTerrainExplorer(trigger);return;}
+    if(key==='riverkeeper'){window.openRiverkeeper(trigger);return;}
     const p=projects[key];if(!p)return;
     activeProject=key;lastChoice=trigger;dialog.dataset.project=key;
     dialog.style.setProperty('--detail-accent',p.accent);

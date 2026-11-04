@@ -32,7 +32,13 @@
     window.addEventListener('resize',fitPortrait);
     document.addEventListener('fullscreenchange',fitPortrait);
     fitPortrait();
-    window.addEventListener('load',()=>{if(location.hash==='#terrain')frame.contentWindow.postMessage('iwmi-open-terrain','*');if(location.hash==='#adb')frame.contentWindow.postMessage('iwmi-open-adb','*');if(['#mahaweli','#knuckles'].includes(location.hash))frame.contentWindow.postMessage('iwmi-open-'+location.hash.slice(1),'*');});
+    function openLinkedExhibit(){
+      const routes={'#terrain':'terrain','#adb':'adb','#mahaweli':'mahaweli','#knuckles':'knuckles','#riverkeeper':'riverkeeper'};
+      const route=routes[location.hash];
+      if(route)frame.contentWindow.postMessage('iwmi-open-'+route,'*');
+    }
+    window.addEventListener('load',openLinkedExhibit);
+    window.addEventListener('hashchange',openLinkedExhibit);
   </script>
 </body>
 </html>
