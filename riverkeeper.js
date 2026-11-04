@@ -81,6 +81,6 @@
   document.body.classList.add('detail-open');if(!dialog.open)dialog.showModal();dialog.querySelector('.rk-body').scrollTop=0;
   window.dispatchEvent(new Event('exhibit-detail-change'));dialog.querySelector('#rk-close').focus({preventScroll:true});sync();
  };
- window.addEventListener('message',e=>{if(e.source===parent&&e.data==='iwmi-open-riverkeeper')window.openRiverkeeper();});
+ window.addEventListener('message',e=>{if(e.source===parent&&e.data==='iwmi-open-riverkeeper')window.RiverkeeperStory.open(document.querySelector('[data-project=riverkeeper]'));});
  if(location.hash==='#riverkeeper')window.openRiverkeeper();
 })();
