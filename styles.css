@@ -23,9 +23,10 @@ main{position:relative;min-height:0}
 .eyebrow{display:flex;align-items:center;justify-content:center;gap:20px;margin:0 0 29px;font-size:25px;font-weight:600;line-height:32px;letter-spacing:5px}
 .eyebrow span{font-size:20px;letter-spacing:0;color:#b8760c}
 h1{margin:0;font-size:106px;line-height:1.03;font-weight:700;letter-spacing:-3px}
+.hero-copy h1{font-size:96px;line-height:1.08;letter-spacing:-2.8px}
 .title-rule{width:96px;height:5px;background:var(--gold);margin:34px auto 30px}
 .hero-message{font-size:35px;line-height:1.4;font-weight:500;margin:0;letter-spacing:-.35px}
-.welcome-summary{position:absolute;left:88px;right:88px;bottom:216px;padding:35px 32px 36px;text-align:center;border:1px solid #e6fff35c;border-radius:12px;background:#073b31b3;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:0 12px 36px #031b1720}
+.welcome-summary{position:absolute;left:88px;right:88px;bottom:216px;padding:35px 32px 36px;text-align:center;border:1px solid #e6fff35c;border-radius:12px;background:linear-gradient(135deg,#123f37e8,#073b31df);box-shadow:0 12px 36px #031b1720}
 .theme-rule{display:flex;justify-content:center;gap:7px;margin-bottom:24px}
 .theme-rule i{width:48px;height:6px;background:var(--green)}
 .theme-rule i:nth-child(2){background:var(--teal)}

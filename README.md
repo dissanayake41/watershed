@@ -1,4 +1,4 @@
-# Watershed Management — IWMI Open Day
+# Upper Watershed Management — IWMI Open Day
 
 Portrait touchscreen exhibition with three interactive project stories, a Sri Lanka 3D terrain explorer and Riverkeeper.
 
@@ -7,7 +7,7 @@ Portrait touchscreen exhibition with three interactive project stories, a Sri La
 **Public exhibition:** [https://dissanayake41.github.io/watershed/](https://dissanayake41.github.io/watershed/)
 
 - Hosted or local server: open `index.html`.
-- Offline kiosk: double-click `OPEN_Watershed_Management_V24_EXHIBITION.html`. Keep the original large portable file intact.
+- Offline kiosk: double-click `OPEN_Upper_Watershed_Management_V25.html`. Keep the original large portable file intact.
 - Direct project links: `#mahaweli`, `#knuckles`, `#adb`; 3D: `#terrain`; Riverkeeper: `#riverkeeper`.
 - The welcome screen's discreet left-edge control opens the five-option menu. Inside a project, the name in the upper right switches projects directly.
 
@@ -40,3 +40,7 @@ The film is fetched only on playback or another player action. Closing the secti
 The main screen uses a new sunlit illustrative landscape with green highlands, blue river water and cultivated terraces, inspired by the Riverkeeper film's palette. Runway animates the existing clouds, foliage and river within that scene. A fixed camera and slow continuous loop keep the screen calm. Navy text replaces the dark full-image shading; the lower message remains on a translucent green pane. Pause/resume and reduced-motion preferences remain supported.
 
 The three project stories, Riverkeeper film, captions, learning tabs, five-option navigation and 3D explorer retain their V23 content. The landscape is an illustrative generated scene, not a photograph or measured representation of a particular location.
+
+## Title and playback correction · V25
+
+The welcome title is **Upper Watershed Management**. The approved Runway landscape now plays at its native pace, using a 9-second forward loop at 24 fps. Its optimized 1080 × 1804 H.264 file is 2.82 MB, reduced from 7.22 MB. The entire clip is buffered locally before playback, so repeat loops do not depend on further network requests. The large message pane retains its translucent appearance without a live backdrop-blur filter. Pause, reduced-motion, background-tab and project-dialog behavior remain supported. All project content is unchanged.
