@@ -17,7 +17,7 @@
 </head>
 <body>
   <div class="screen" id="screen">
-    <iframe id="portrait-exhibit" title="Upper Watershed Management — portrait welcome screen" src="exhibit.html?v=30" allow="fullscreen; autoplay" allowfullscreen></iframe>
+    <iframe id="portrait-exhibit" title="Upper Watershed Management — portrait welcome screen" src="exhibit.html?v=31" allow="fullscreen; autoplay" allowfullscreen></iframe>
   </div>
   <noscript>Please enable JavaScript to view the exhibit.</noscript>
   <script>
@@ -33,7 +33,7 @@
     document.addEventListener('fullscreenchange',fitPortrait);
     fitPortrait();
     function openLinkedExhibit(){
-      const routes={'#terrain':'terrain','#adb':'adb','#adb-dashboard':'adb-dashboard','#mahaweli':'mahaweli','#knuckles':'knuckles','#riverkeeper':'riverkeeper'};
+      const routes={'#highlands':'highlands','#terrain':'terrain','#adb':'adb','#adb-dashboard':'adb-dashboard','#mahaweli':'mahaweli','#knuckles':'knuckles','#riverkeeper':'riverkeeper'};
       const route=routes[location.hash];
       if(route)frame.contentWindow.postMessage('iwmi-open-'+route,'*');
     }

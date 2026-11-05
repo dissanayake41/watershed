@@ -67,10 +67,10 @@
   toggle.addEventListener('click',()=>setMenu(!menuOpen));
   dismiss.addEventListener('click',()=>setMenu(false));
   document.addEventListener('pointerdown',event=>{
-    if(menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!document.getElementById('riverkeeper-dialog')?.open&&!document.getElementById('adb-dashboard')?.open&&!document.getElementById('project-briefing')?.open&&!document.getElementById('river-story')?.open&&!nav.contains(event.target)&&!toggle.contains(event.target)&&!event.target.closest('.exhibit-footer'))setMenu(false,false);
+    if(menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!document.getElementById('riverkeeper-dialog')?.open&&!document.getElementById('adb-dashboard')?.open&&!document.getElementById('project-briefing')?.open&&!document.getElementById('river-story')?.open&&!document.getElementById('highlands-dialog')?.open&&!nav.contains(event.target)&&!toggle.contains(event.target)&&!event.target.closest('.exhibit-footer'))setMenu(false,false);
   });
   document.addEventListener('keydown',event=>{
-    if(event.key==='Escape'&&menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!document.getElementById('riverkeeper-dialog')?.open&&!document.getElementById('adb-dashboard')?.open&&!document.getElementById('project-briefing')?.open&&!document.getElementById('river-story')?.open){event.preventDefault();setMenu(false);}
+    if(event.key==='Escape'&&menuOpen&&!dialog.open&&!document.getElementById('map-dialog').open&&!document.getElementById('adb-dialog').open&&!document.getElementById('riverkeeper-dialog')?.open&&!document.getElementById('adb-dashboard')?.open&&!document.getElementById('project-briefing')?.open&&!document.getElementById('river-story')?.open&&!document.getElementById('highlands-dialog')?.open){event.preventDefault();setMenu(false);}
   });
   toggle.addEventListener('keydown',event=>{
     if(event.key==='ArrowRight'||event.key==='ArrowDown'){event.preventDefault();setMenu(true);choices[0].focus({preventScroll:true});}
@@ -94,6 +94,7 @@
     if(focus)tabs.children[index].focus({preventScroll:true});
   }
   function openProject(key,trigger){
+ if(key==='highlands'){window.openHighlands(trigger);return;}
     if(['mahaweli','knuckles','riverkeeper'].includes(key)){window.openProjectBriefing(key,trigger);return;}
     if((key==='mahaweli'||key==='knuckles')&&window.openStudyExplorer){window.openStudyExplorer(key,trigger);return;}
     if(key==='dashboard'){window.openADBDashboard(trigger);return;}
@@ -125,3 +126,4 @@
   dialog.addEventListener('click',event=>{if(event.target===dialog){const r=dialog.getBoundingClientRect();if(event.clientX<r.left||event.clientX>r.right||event.clientY<r.top||event.clientY>r.bottom)dialog.close();}});
   dialog.addEventListener('close',()=>{document.body.classList.remove('detail-open');window.dispatchEvent(new Event('exhibit-detail-change'));if(lastChoice)lastChoice.focus({preventScroll:true});});
 })();
+
